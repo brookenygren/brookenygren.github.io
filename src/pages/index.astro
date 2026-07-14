@@ -3,12 +3,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Home Page";
 import { Icon } from "astro-icon/components";
 import { Mail } from "@lucide/astro";
+import pfpImage from '../assets/pfp.png'; 
+import { Image } from 'astro:assets';
 ---
 
 <BaseLayout>
     <div class="flex-col md:flex-row flex max-w mx-auto md:px-20 max-w-5xl my-20">
         <div class="flex-1 flex justify-center md:order-2 px-16">
-            <img src="/src/assets/pfp.png" class="rounded-full outline-white outline-5 aspect-square object-cover object-top" alt="A headshot of Brooke Nygren" />
+            <Image 
+                src={pfpImage} 
+                class="rounded-full outline-white outline-5 aspect-square object-cover object-top" 
+                alt="A headshot of Brooke Nygren" 
+                width={400} 
+                height={400} 
+            />
         </div>
         <div class="flex-1 flex justify-center flex-col items-center">
             <h1
