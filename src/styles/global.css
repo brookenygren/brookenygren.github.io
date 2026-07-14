@@ -1,0 +1,13 @@
+@import url('https://googleapis.com');
+@import "tailwindcss";
+
+body {
+    background-color: #0d1117;
+}
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  
+}
+
+

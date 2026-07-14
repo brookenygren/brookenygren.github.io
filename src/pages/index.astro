@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Home Page";
+import { Icon } from "astro-icon/components";
+import { Mail } from "@lucide/astro";
+---
+
+<BaseLayout>
+    <div class="flex-col md:flex-row flex max-w mx-auto md:px-20 max-w-5xl my-20">
+        <div class="flex-1 flex justify-center md:order-2 px-16">
+            <img src="/src/assets/pfp.png" class="rounded-full outline-white outline-5 aspect-square object-cover object-top" alt="A headshot of Brooke Nygren" />
+        </div>
+        <div class="flex-1 flex justify-center flex-col items-center">
+            <h1
+                class="py-4 text-5xl md:text-4xl lg:text-5xl font-black text-white whitespace-nowrap"
+            >
+                Brooke Nygren</h1>
+                <p class="text-white py-4 text-xl md:text-xl lg:text-2xl text-center"> <span class="text-orange-500">Hello!</span> I'm Brooke, a technology enthusiast and university student.</p>
+            <div class="flex gap-10 w-80">
+                <div onclick="window.open('mailto:brooke@brookenygren.com','_blank')"
+                    class="whitespace-nowrap px-4 flex-[2] hover:scale-110 duration-300 ease-in-out transition-transform bg-white items-center flex justify-center rounded-lg text-2xl text-black font-bold"
+                >
+                    <p>Email Me</p>
+                </div>
+                <div onclick="window.open('https://www.linkedin.com/in/brookenygren','_blank')"
+                    class="flex-1 hover:scale-110 duration-300 ease-in-out transition-transform bg-orange-500 items-center flex justify-center rounded-lg"
+                >
+                    <Icon
+                        class="text-white m-4 size-8"
+                        name="simple-icons:linkedin"
+                    />
+                </div>
+                <div onclick="window.open('https://www.github.com/brookenygren','_blank')"
+                    class="flex-1 hover:scale-110 duration-300 ease-in-out transition-transform bg-orange-400 items-center flex justify-center rounded-lg"
+                >
+                    <Icon
+                        class="text-white m-4 size-8"
+                        name="simple-icons:github"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bg-gray-800 w-full px-10 md:px-20 py-5 items-center justify-center flex gap-6 flex-col md:flex-row" id="certs">
+        <div class="bg-gray-700 w-80 md:w-64 text-center p-5 text-white rounded-3xl">
+            <h3 class="font-bold">Security Pro Certification</h3>
+            <h4 class="italic text-gray-300">Issued by CompTIA · 2026-'29</h4>
+            <img class="block mx-auto" src="https://www.comptia.org/_next/image/?url=https%3A%2F%2Fimages3.cmp.optimizely.com%2F84b970a6b71111efac96d615e91762a5%3Fwidth%3D300%26height%3D300&w=384&q=90">
+            <p class="text-sm">A 100% preformance-based certification which demonstrates skills in essential elements of computer and network security.</p>
+        </div>
+        <div class="bg-gray-700 w-80 md:w-64 text-center p-5 text-white rounded-3xl">
+            <h3 class="font-bold">Google IT Support Professional</h3>
+            <h4 class="italic text-gray-300">Issued by Google · 2026</h4>
+            <img class="block mx-auto" src="https://images.credly.com/size/340x340/images/7b6ff515-a2a0-4d01-a4e1-ac707697fdb1/image.png">
+            <p class="text-sm">A Google-issued credential recognizing demonstrated competence in foundational IT support.</p>
+        </div>
+    </div>
+</BaseLayout>
