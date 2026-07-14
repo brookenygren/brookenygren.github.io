@@ -1,2 +1,2 @@
 # brookenygren.com
-A site intended to be given offline
+Welcome to my portfolio site! This webpage mainly exists so that people have something to look at if they check brookenygren.com, which is used for a few web services currently. It's been made using Astro and Tailwind!
