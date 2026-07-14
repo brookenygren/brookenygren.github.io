@@ -25,23 +25,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22 # Matches your package.json engine constraint
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.32.1
+          node-version: 22
+          cache: 'npm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm ci --legacy-peer-deps
 
       - name: Build site
-        run: pnpm run build
+        run: npm run build
 
       - name: Upload production artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # Astro outputs production builds here
+          path: ./dist
 
   deploy:
     needs: build
