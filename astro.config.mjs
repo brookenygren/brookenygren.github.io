@@ -1,13 +1,16 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import icon from 'astro-icon'
+import icon from 'astro-icon';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://brookenygren.github.io',
+  base: '/brookenygren.github.io', 
+
   integrations: [icon()],
+
   vite: {
     plugins: [tailwindcss()]
   }
 });
-
